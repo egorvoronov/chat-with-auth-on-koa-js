@@ -1,0 +1,14 @@
+extends /templates/layoutWithAuth
+
+block title
+    title= title
+block content
+    .container
+        form.authForm(method="post", action=action)
+            h2= title
+            div.form-group
+                input.input-block-level(type="email", name="login", placeholder="Email", autofocus)
+            div.form-group
+                input.input-block-level(type="password", name="password", placeholder="Password")
+            button.btn.btn-large.btn-primary(type="submit")= buttonName
+    script(src="/js/auth.js")

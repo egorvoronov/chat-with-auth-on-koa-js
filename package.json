@@ -1,0 +1,32 @@
+{
+  "name": "Chat-with-auth-on-koa-js",
+  "version": "1.0.0",
+  "description": "Chat-with-auth-on-koa-js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Egor Voronov",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^3.1.0",
+    "cookie": "^0.1.2",
+    "cookie-parser": "^1.3.3",
+    "koa": "^0.13.0",
+    "koa-favicon": "^1.2.0",
+    "koa-formidable": "^1.0.0",
+    "koa-generic-session": "^1.2.2",
+    "koa-jade": "^0.3.1",
+    "koa-logger": "^1.2.2",
+    "koa-passport": "^1.1.3",
+    "koa-router": "^3.6.0",
+    "koa-session-mongoose": "^0.4.0",
+    "koa-static": "^1.4.7",
+    "lodash": "^2.4.1",
+    "mongoose": "^3.8.19",
+    "passport-facebook": "^1.0.3",
+    "passport-local": "^1.0.0",
+    "socket.io": "^1.2.0",
+    "thunkify": "^2.1.2"
+  }
+}

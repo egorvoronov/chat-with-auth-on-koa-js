@@ -1,0 +1,9 @@
+extends /templates/layout
+
+block stateString
+    .container
+        if user
+            div(class="alert alert-success", role="alert") You are authorized as
+                b &nbsp;#{user.login}
+        else
+            div(class="alert alert-warning", role="alert") You are not authorized.

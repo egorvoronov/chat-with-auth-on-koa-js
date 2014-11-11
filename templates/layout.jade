@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+    head
+        block title
+            title= title
+        block scripts
+            script(src='/vendor/bower_components/jquery/dist/jquery.min.js')
+            script(src='/vendor/bower_components/bootstrap/dist/js/bootstrap.min.js')
+        block metas
+            meta(name='viewport', content='width=device-width, initial-scale=1')
+        block links
+            link(rel='stylesheet', href='/vendor/bower_components/bootstrap/dist/css/bootstrap.min.css')
+            link(rel='stylesheet', href='/css/main.css')
+        body
+            // Fixed navbar
+            .navbar.navbar-default.navbar-fixed-top(role='navigation')
+                .container
+                    .navbar-header
+                        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        a.navbar-brand(href='/') Chat with auth on Koa.js
+                    .navbar-collapse.collapse
+                        ul.nav.navbar-nav
+                            li
+                                a(href='/chat') Chat
+                        ul.nav.navbar-nav.navbar-right
+                            if user
+                                li
+                                    a(href='/')= user.login
+                                li
+                                    a(id = 'logout', href='./') Log out
+                            else
+                                li
+                                    a(href = '/auth/register') Sign In
+                                li
+                                    a(href='/auth/login') Log in
+                                li#facebook
+                                    a(href='/auth/facebook') Facebook
+            block stateString
+
+            block content
+
+            script(src="/js/logout.js")

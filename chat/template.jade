@@ -1,0 +1,27 @@
+extends /templates/layoutWithAuth
+
+block title
+    title Chat
+
+block content
+    .container
+        #room.row
+            .col-md-8
+                form
+                    input.form-control(autocomplete="off" autofocus placeholder="Your message...")
+                ul.list-group.messages
+            .col-md-4
+                .panel.panel-default
+                    .panel-heading Participants
+                    .panel-body
+                        ol
+
+    script(src="/vendor/bower_components/socket.io-client/socket.io.js")
+    script(src="/vendor/bower_components/handlebars/handlebars-v2.0.0.js")
+    script(id="message-template", type="text/x-handlebars-template")
+        li.list-group-item
+            h4.list-group-item-heading.
+                {{login}}
+            p.list-group-item-text {{text}}
+    script(src="/js/sockets.js")
+
